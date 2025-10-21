@@ -135,9 +135,13 @@ nav .nav-links a:hover {
   transform: rotate(-45deg);
 }
 
-/* Desktop Navigation - Hide mobile menu */
+/* Desktop Navigation - Show desktop nav, hide mobile menu */
 .desktop-nav {
   display: flex;
+}
+
+.mobile-menu-toggle {
+  display: none;
 }
 
 /* Mobile Navigation Styles */
@@ -150,7 +154,8 @@ nav .nav-links a:hover {
     display: none;
   }
   
-  nav .nav-links {
+  /* Mobile menu navigation links */
+  .mobile-menu-toggle + .nav-links {
     position: fixed;
     left: -100%;
     top: 0;
@@ -166,11 +171,11 @@ nav .nav-links a:hover {
     z-index: 999;
   }
   
-  nav .nav-links.active {
+  .mobile-menu-toggle + .nav-links.active {
     left: 0;
   }
   
-  nav .nav-links a {
+  .mobile-menu-toggle + .nav-links a {
     display: block;
     margin: 1rem 0;
     font-size: 1.2rem;
@@ -182,7 +187,7 @@ nav .nav-links a:hover {
     transition: all 0.3s ease;
   }
   
-  nav .nav-links a:hover {
+  .mobile-menu-toggle + .nav-links a:hover {
     background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
     color: white;
     transform: scale(1.05);
