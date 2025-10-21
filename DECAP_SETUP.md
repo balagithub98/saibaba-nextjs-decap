@@ -21,53 +21,29 @@
    - Node version: `18` (in Environment variables)
 6. **Deploy!** (takes 2-3 minutes)
 
-### 2. Enable Netlify Identity (Free Tier)
+### 2. Enable Netlify Identity (Free Tier - No OAuth Needed!)
 
 1. **In your Netlify dashboard**:
    - Go to **Site settings** → **Identity**
    - Click **Enable Identity** (free tier includes this!)
    - Go to **Registration** → **Open registration** (for now)
-   - Go to **External providers** → **GitHub** → **Enable**
-   
-**Note**: Free tier includes 1,000 active users - perfect for temple website!
+   - **Skip GitHub OAuth** - we'll use Git Gateway instead!
 
-### 3. Create GitHub OAuth App
+### 3. Enable Git Gateway (No Credentials Required!)
 
-1. **Go to GitHub Settings**:
-   - Go to **Developer settings** → **OAuth Apps**
-   - Click **New OAuth App**
+1. **In your Netlify dashboard**:
+   - Go to **Site settings** → **Identity**
+   - Scroll down to **Git Gateway**
+   - Click **Enable Git Gateway**
+   - **That's it!** No GitHub OAuth setup needed!
 
-2. **Fill in the details**:
-   - **Application name**: `Temple Website CMS`
-   - **Homepage URL**: `https://your-site-name.netlify.app`
-   - **Authorization callback URL**: `https://your-site-name.netlify.app/.netlify/identity/oauth/github/callback`
+**Note**: Git Gateway uses Netlify's built-in authentication - no external credentials required!
 
-3. **Copy the credentials**:
-   - Copy **Client ID** and **Client Secret**
-
-### 4. Configure Netlify Identity with GitHub
-
-1. **In Netlify Identity settings**:
-   - Go to **External providers** → **GitHub**
-   - Enter your **Client ID** and **Client Secret**
-   - Save settings
-
-### 5. Update DecapCMS Configuration
-
-The configuration is already set up in `public/admin/config.yml`:
-
-```yaml
-backend:
-  name: github
-  repo: balagithub98/saibaba-nextjs-decap
-  branch: master
-```
-
-### 6. Test the Admin Panel
+### 4. Test the Admin Panel (No Credentials Needed!)
 
 1. **Visit your site**: `https://your-site-name.netlify.app`
 2. **Go to admin**: `https://your-site-name.netlify.app/admin`
-3. **Sign up/Login** with GitHub
+3. **Sign up/Login** with email (no GitHub OAuth needed!)
 4. **Start managing content!**
 
 ## 📝 Content Management Features
@@ -106,7 +82,15 @@ backend:
    - Verify branch permissions
    - Check Netlify build logs
 
-## 💰 Free Tier Benefits
+## 🔐 Git Gateway Benefits (No OAuth Required!)
+
+### ✅ **Why Git Gateway is Perfect:**
+- **No GitHub OAuth setup** - Skip the complex credential process
+- **No paid subscriptions** - Works with free Netlify tier
+- **Simple email authentication** - Just sign up with email
+- **Automatic Git commits** - Changes saved to GitHub automatically
+- **Built-in security** - Netlify handles all authentication
+- **Easy for non-technical users** - No external app setup
 
 ### ✅ **What's Included (Free):**
 - **100GB bandwidth/month** - Perfect for temple website
@@ -117,6 +101,7 @@ backend:
 - **SSL certificates** - Automatic HTTPS
 - **Form handling** - Contact forms work
 - **Identity & Authentication** - DecapCMS works perfectly
+- **Git Gateway** - No OAuth credentials needed!
 
 ### 📊 **Perfect for Temple Websites:**
 - **Low traffic** - Most temple sites are under 100GB/month

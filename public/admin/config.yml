@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: balagithub98/saibaba-nextjs-decap
+  name: git-gateway
   branch: master
 
 media_folder: "public/images"
