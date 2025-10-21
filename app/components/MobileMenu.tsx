@@ -36,7 +36,7 @@ export default function MobileMenu() {
         <span className="hamburger-line"></span>
       </button>
       
-      <div className={`nav-links ${isOpen ? 'active' : ''}`}>
+      <div className={`mobile-nav-links ${isOpen ? 'active' : ''}`}>
         <a href="/" onClick={closeMenu}>🏠 Home</a>
         <a href="/about" onClick={closeMenu}>📖 About</a>
         <a href="/events" onClick={closeMenu}>📅 Events</a>

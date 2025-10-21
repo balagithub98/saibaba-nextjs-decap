@@ -144,6 +144,10 @@ nav .nav-links a:hover {
   display: none;
 }
 
+.mobile-nav-links {
+  display: none;
+}
+
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
@@ -154,8 +158,8 @@ nav .nav-links a:hover {
     display: none;
   }
   
-  /* Mobile menu navigation links */
-  .mobile-menu-toggle + .nav-links {
+  .mobile-nav-links {
+    display: block;
     position: fixed;
     left: -100%;
     top: 0;
@@ -171,11 +175,11 @@ nav .nav-links a:hover {
     z-index: 999;
   }
   
-  .mobile-menu-toggle + .nav-links.active {
+  .mobile-nav-links.active {
     left: 0;
   }
   
-  .mobile-menu-toggle + .nav-links a {
+  .mobile-nav-links a {
     display: block;
     margin: 1rem 0;
     font-size: 1.2rem;
@@ -187,7 +191,7 @@ nav .nav-links a:hover {
     transition: all 0.3s ease;
   }
   
-  .mobile-menu-toggle + .nav-links a:hover {
+  .mobile-nav-links a:hover {
     background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
     color: white;
     transform: scale(1.05);
