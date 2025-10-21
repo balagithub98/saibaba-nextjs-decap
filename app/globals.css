@@ -98,6 +98,105 @@ nav .nav-links a:hover {
   box-shadow: 0 8px 25px rgba(146, 64, 14, 0.3);
 }
 
+/* Mobile Hamburger Menu */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-line {
+  width: 2rem;
+  height: 0.25rem;
+  background: #92400e;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.mobile-menu-toggle.active .hamburger-line:first-child {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Desktop Navigation - Hide mobile menu */
+.desktop-nav {
+  display: flex;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  nav .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 5rem 0 2rem 0;
+    height: 100vh;
+    z-index: 999;
+  }
+  
+  nav .nav-links.active {
+    left: 0;
+  }
+  
+  nav .nav-links a {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  nav .nav-links a:hover {
+    background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  nav .nav-container {
+    padding: 0 1rem;
+  }
+  
+  nav .logo {
+    font-size: 1.5rem;
+  }
+}
+
 /* Hero Section - Breathtaking Design */
 .hero-section {
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);

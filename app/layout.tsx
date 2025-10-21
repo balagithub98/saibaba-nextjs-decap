@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import MobileMenu from './components/MobileMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,12 +23,17 @@ export default function RootLayout({
             <a href="/" className="logo">
               🕉️ Sacred Temple
             </a>
-            <div className="nav-links">
+            
+            {/* Desktop Navigation */}
+            <div className="nav-links desktop-nav">
               <a href="/">🏠 Home</a>
               <a href="/about">📖 About</a>
               <a href="/events">📅 Events</a>
               <a href="/contact">📞 Contact</a>
             </div>
+            
+            {/* Mobile Menu Component */}
+            <MobileMenu />
           </div>
         </nav>
         <main>{children}</main>
