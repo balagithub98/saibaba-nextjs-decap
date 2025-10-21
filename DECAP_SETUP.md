@@ -1,30 +1,35 @@
 # 🕉️ Temple Website - DecapCMS Setup Guide
 
-## 📋 Prerequisites
+## 📋 Prerequisites (Free Tier Compatible)
 
-1. **GitHub Repository**: Your code is already on GitHub
-2. **Netlify Account**: For hosting and authentication
-3. **GitHub OAuth App**: For DecapCMS authentication
+1. **GitHub Repository**: Your code is already on GitHub ✅
+2. **Netlify Free Account**: Perfect for temple websites
+3. **GitHub OAuth App**: Free to create
+4. **No Credit Card Required**: Everything works on free tier!
 
 ## 🚀 Step-by-Step Setup
 
-### 1. Deploy to Netlify
+### 1. Deploy to Netlify (Free Tier)
 
 1. **Go to [Netlify](https://netlify.com)**
-2. **Click "New site from Git"**
-3. **Connect your GitHub repository**: `balagithub98/saibaba-nextjs-decap`
-4. **Build settings**:
+2. **Sign up with GitHub** (free account)
+3. **Click "New site from Git"**
+4. **Connect your GitHub repository**: `balagithub98/saibaba-nextjs-decap`
+5. **Build settings** (free tier supports all of this):
    - Build command: `npm run build`
    - Publish directory: `out`
    - Node version: `18` (in Environment variables)
+6. **Deploy!** (takes 2-3 minutes)
 
-### 2. Enable Netlify Identity
+### 2. Enable Netlify Identity (Free Tier)
 
 1. **In your Netlify dashboard**:
    - Go to **Site settings** → **Identity**
-   - Click **Enable Identity**
+   - Click **Enable Identity** (free tier includes this!)
    - Go to **Registration** → **Open registration** (for now)
    - Go to **External providers** → **GitHub** → **Enable**
+   
+**Note**: Free tier includes 1,000 active users - perfect for temple website!
 
 ### 3. Create GitHub OAuth App
 
@@ -100,6 +105,24 @@ backend:
    - Check GitHub repository access
    - Verify branch permissions
    - Check Netlify build logs
+
+## 💰 Free Tier Benefits
+
+### ✅ **What's Included (Free):**
+- **100GB bandwidth/month** - Perfect for temple website
+- **300 build minutes/month** - More than enough
+- **1,000 active users** - Great for temple community
+- **Unlimited sites** - Can host multiple projects
+- **Custom domains** - Use your own domain name
+- **SSL certificates** - Automatic HTTPS
+- **Form handling** - Contact forms work
+- **Identity & Authentication** - DecapCMS works perfectly
+
+### 📊 **Perfect for Temple Websites:**
+- **Low traffic** - Most temple sites are under 100GB/month
+- **Simple content** - Text and images are lightweight
+- **Community focused** - 1,000 users is plenty
+- **Cost effective** - $0/month hosting!
 
 ## 🎯 Next Steps
 
