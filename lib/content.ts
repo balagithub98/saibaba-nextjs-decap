@@ -58,8 +58,8 @@ export async function getEvents() {
         const { data, content } = matter(fileContents)
         return { ...data, body: content }
       })
-      .filter(event => event.published !== false)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .filter(event => (event as any).published !== false)
+      .sort((a, b) => new Date((b as any).date).getTime() - new Date((a as any).date).getTime())
     
     return events
   } catch (error) {

@@ -8,13 +8,13 @@ export default async function About() {
     <div className="page-content">
       <div className="container">
         <h1>
-          {content?.title || 'About Our Temple'}
+          {(content as any)?.title || 'About Our Temple'}
         </h1>
         
-        {content?.image && (
+        {(content as any)?.image && (
           <div className="featured-image">
             <Image
-              src={content.image}
+              src={(content as any).image}
               alt="Temple"
               width={800}
               height={400}

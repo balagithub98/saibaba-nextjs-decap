@@ -7,7 +7,7 @@ export default async function Contact() {
     <div className="page-content">
       <div className="container">
         <h1>
-          {content?.title || 'Contact Us'}
+          {(content as any)?.title || 'Contact Us'}
         </h1>
         
         <div className="content-body">
@@ -19,34 +19,34 @@ export default async function Contact() {
             <div className="contact-info">
               <h3>Contact Information</h3>
               
-              {content?.address && (
+              {(content as any)?.address && (
                 <div className="info-item">
                   <h4>Address:</h4>
-                  <p>{content.address}</p>
+                  <p>{(content as any).address}</p>
                 </div>
               )}
               
-              {content?.phone && (
+              {(content as any)?.phone && (
                 <div className="info-item">
                   <h4>Phone:</h4>
-                  <p>{content.phone}</p>
+                  <p>{(content as any).phone}</p>
                 </div>
               )}
               
-              {content?.email && (
+              {(content as any)?.email && (
                 <div className="info-item">
                   <h4>Email:</h4>
-                  <p>{content.email}</p>
+                  <p>{(content as any).email}</p>
                 </div>
               )}
             </div>
           </div>
 
           <div>
-            {content?.mapEmbed && (
+            {(content as any)?.mapEmbed && (
               <div 
                 className="contact-info"
-                dangerouslySetInnerHTML={{ __html: content.mapEmbed }}
+                dangerouslySetInnerHTML={{ __html: (content as any).mapEmbed }}
               />
             )}
           </div>

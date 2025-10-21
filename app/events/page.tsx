@@ -9,13 +9,13 @@ export default async function Events() {
     <div className="page-content">
       <div className="container">
         <h1>
-          {content?.title || 'Events & Programs'}
+          {(content as any)?.title || 'Events & Programs'}
         </h1>
         
-        {content?.image && (
+        {(content as any)?.image && (
           <div className="featured-image">
             <Image
-              src={content.image}
+              src={(content as any).image}
               alt="Events"
               width={800}
               height={400}
@@ -31,18 +31,18 @@ export default async function Events() {
         <div className="events-grid">
           {events.map((event, index) => (
             <div key={index} className="event-card">
-              {event.image && (
+              {(event as any).image && (
                 <Image
-                  src={event.image}
-                  alt={event.title}
+                  src={(event as any).image}
+                  alt={(event as any).title}
                   width={400}
                   height={200}
                 />
               )}
               <div className="card-content">
-                <h3>{event.title}</h3>
+                <h3>{(event as any).title}</h3>
                 <p className="event-date">
-                  {new Date(event.date).toLocaleDateString()} at {event.time}
+                  {new Date((event as any).date).toLocaleDateString()} at {(event as any).time}
                 </p>
                 <div 
                   className="event-description"
