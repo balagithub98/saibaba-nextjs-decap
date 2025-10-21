@@ -1,0 +1,9 @@
+# Image Placeholder
+
+This directory should contain:
+- temple-hero.jpg (800x400px recommended)
+- temple-about.jpg (800x400px recommended) 
+- temple-events.jpg (800x400px recommended)
+- new-year-ceremony.jpg (400x200px recommended)
+
+For now, the website will show fallback content when images are missing.

@@ -1,0 +1,64 @@
+backend:
+  name: test-repo
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    folder: "content/homepage"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Hero Image", name: "heroImage", widget: "image"}
+      - {label: "Function Name", name: "functionName", widget: "string"}
+      - {label: "Function Date", name: "functionDate", widget: "datetime"}
+      - {label: "Function Time", name: "functionTime", widget: "string"}
+      - {label: "Special Message", name: "specialMessage", widget: "text"}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
+
+  - name: "pages"
+    label: "Static Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Featured Image", name: "image", widget: "image", required: false}
+
+      - label: "Events Page"
+        name: "events"
+        file: "content/pages/events.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Featured Image", name: "image", widget: "image", required: false}
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/pages/contact.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Address", name: "address", widget: "text"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Map Embed Code", name: "mapEmbed", widget: "text", required: false}
+
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Time", name: "time", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
